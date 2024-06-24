@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 08 DOM</title>
+    
+</head>
+<body>
+    <div id="container">
+                
+    </div>
+    <script>       
+    const elemento = document.getElementById('container');
+    const elementofilho = document.createElement('p');
+    elementofilho.innerText = 'texto qualquer';
+    elemento.append(elementofilho)
+    </script>
+</body>
+</html>
