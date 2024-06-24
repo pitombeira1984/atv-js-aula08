@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 08 DOM</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #343434;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+label{
+    color: #ffffff;
+}
+h2{
+    color: #ffffff;
+}
+button{
+    background-color: blue;
+    color: #ffffff;
+    width: 100px;
+    height: auto;
+    padding: 8px;
+    margin-top: 16px;
+    box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: none;
+    border-radius: 16px;
+    transition: background-color 0,6s;
+}
+
+button:hover{
+    background-color: deepskyblue;
+}
+
+h1{
+    color: #ffffff;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Implementando Função na Página</h1>
+        <form id="form">
+            <label for="tex">Digite um Algo:</label>
+            <input type="text" name="text" id="text">
+            <button type="button" onclick="getValue()">Click Aqui</button>
+        </form>
+        <h2>Resultado:<span id="result"></span></h2>        
+    </div>
+    <script>
+       
+    function getValue() {
+
+    const inputElement = document.getElementById('text');
+
+    const inputValue = inputElement.value;
+
+    document.getElementById('result').textContent = inputValue;
+}
+
+    </script>
+</body>
+</html>
