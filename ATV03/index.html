@@ -3,18 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 08 DOM</title>
-    
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #343434;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }        
+        h1{
+            color: #ffffff;
+        }
+        p{
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
     <div id="container">
-                
+        
     </div>
-    <script>       
-    const elemento = document.getElementById('container');
-    const elementofilho = document.createElement('p');
-    elementofilho.innerText = 'texto qualquer';
-    elemento.append(elementofilho)
+    <script>
+        const element = document.getElementById('container');
+        const elementFilho1 = document.createElement('h1');
+        const elementFilho2 = document.createElement('p');
+        element.append(elementFilho1,elementFilho2);
+        elementFilho1.innerText = 'DIGITE UM TÍTULO'
+        elementFilho2.innerText = 'DIGITE UM PARÁGRAFO'
     </script>
 </body>
 </html>
