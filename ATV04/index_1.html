@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #343434;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button{
+            background-color: blue;
+            color: #ffffff;
+            width: 100px;
+            height: auto;
+            padding: 8px;
+            margin-top: 16px;
+            box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            border: none;
+            border-radius: 16px;
+            transition: background-color 0.6s;
+        }
+        
+        button:hover{
+            background-color: deepskyblue;
+        }        
+        h1{
+            color: #ffffff;
+        }
+        p{
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>TROCAR IMAGEM</h1>
+        <img src="./img1.png" id="imagem">
+        <button type="button" onclick="trocarImagem()">Trocar Imagem</button>
+    </div>
+    <script>
+        const imagens = ['./img1.png', './img2.png', './img3.jpg']; // Adicione mais imagens se necessário
+        let indiceAtual = 0;
+
+        function trocarImagem() {
+            let meuElemento = document.getElementById('imagem');
+            indiceAtual = (indiceAtual + 1) % imagens.length;
+            meuElemento.src = imagens[indiceAtual];
+        }
+    </script>
+    <!--Adicionamos um array imagens com os caminhos das imagens que queremos alternar.-->
+    <!--Mantemos um índice indiceAtual para acompanhar qual imagem está atualmente sendo exibida.-->
+    <!--A função trocarImagem atualiza o índice e altera a fonte da imagem (src) para a próxima no array. 
+        Usamos o operador % para garantir que o índice volte ao início do array após alcançar o final, 
+        permitindo um loop contínuo pelas imagens.-->
+</body>
+</html>

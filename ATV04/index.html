@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #343434;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button{
+            background-color: blue;
+            color: #ffffff;
+            width: 100px;
+            height: auto;
+            padding: 8px;
+            margin-top: 16px;
+            box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            border: none;
+            border-radius: 16px;
+            transition: background-color 0,6s;
+        }
+        
+        button:hover{
+            background-color: deepskyblue;
+        }        
+        h1{
+            color: #ffffff;
+        }
+        p{
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>TROCAR IMAGEM</h1>
+        <img src="./img1.png" id="imagem">
+        <button type="button" onclick="trocarImagem()">Trocar Imagem</button>
+    </div>
+    <script>
+        function trocarImagem(){
+
+            let meuElemento = document.getElementById('imagem');
+
+            meuElemento.src = 'img2.png';   
+
+        }
+        
+    </script>
+</body>
+</html>
